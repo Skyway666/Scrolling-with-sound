@@ -24,11 +24,11 @@ bool ModuleAudio::Init()
 	{
 		LOG("An error has ocurred while opening the audio has ocurred: %s", SDL_GetError())
 	}
-	ModuleAudio::Load("INTRODUCE EL PATH");
+	ModuleAudio::Load("song.ogg");
 
 	if (Mix_PlayMusic(music, -1) == -1)
 	{
-		LOG("An error has ocurred while reproducing the audio has ocurred: %s", SDL_GetError())
+		LOG("An error has ocurred while reproducing the audio %s", SDL_GetError())
 	}
 	return true;
 }
@@ -46,5 +46,7 @@ Mix_Music* const ModuleAudio::Load(const char* path)
 }
 bool ModuleAudio::CleanUp()
 {
+	Mix_CloseAudio();
+	Mix_FreeMusic(music);
 	return true;
 }

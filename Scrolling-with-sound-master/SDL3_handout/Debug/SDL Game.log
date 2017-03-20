@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 ﻿  ModuleInput.cpp
   SDL Game.vcxproj -> C:\Users\genisbs\Documents\GitHub\Scrolling-with-sound\Scrolling-with-sound-master\SDL3_handout\Debug\SDL3 Handout.exe
   SDL Game.vcxproj -> C:\Users\genisbs\Documents\GitHub\Scrolling-with-sound\Scrolling-with-sound-master\SDL3_handout\Debug\SDL3 Handout.pdb (Full PDB)
+=======
+﻿  ModuleAudio.cpp
+  Generating Code...
+  Compiling...
+  Application.cpp
+  Generating Code...
+  SDL Game.vcxproj -> C:\Users\lucasgm\Documents\GitHub\Scrolling-with-sound\Scrolling-with-sound-master\SDL3_handout\Debug\SDL3 Handout.exe
+  SDL Game.vcxproj -> C:\Users\lucasgm\Documents\GitHub\Scrolling-with-sound\Scrolling-with-sound-master\SDL3_handout\Debug\SDL3 Handout.pdb (Full PDB)
+>>>>>>> origin/master

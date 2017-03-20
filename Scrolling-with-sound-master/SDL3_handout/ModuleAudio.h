@@ -21,7 +21,7 @@ public:
 
 public:
 	Mix_Music* music;
-	const Uint8 *keyboard = nullptr;
+	
 };
 
 #endif // __ModuleAudio_H__
