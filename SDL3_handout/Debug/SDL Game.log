@@ -1,3 +1,4 @@
-﻿  ModuleRender.cpp
+﻿  ModuleAudio.cpp
+  LINK : C:\Users\genisbs\Documents\GitHub\Scrolling-with-sound\SDL3_handout\Debug\SDL3 Handout.exe not found or not built by the last incremental link; performing full link
   SDL Game.vcxproj -> C:\Users\genisbs\Documents\GitHub\Scrolling-with-sound\SDL3_handout\Debug\SDL3 Handout.exe
   SDL Game.vcxproj -> C:\Users\genisbs\Documents\GitHub\Scrolling-with-sound\SDL3_handout\Debug\SDL3 Handout.pdb (Full PDB)
