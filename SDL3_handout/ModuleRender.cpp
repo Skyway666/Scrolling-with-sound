@@ -31,7 +31,7 @@ bool ModuleRender::Init()
 		LOG("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
 		ret = false;
 	}
-	tex = App->textures->Load("test.png");
+	tex = App->textures->Load("Tilemaptest.png");
 	// TODO 9: load a texture "test.png" to test is everything works well
 
 	return ret;
