@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "ModuleInput.h"
 #include "SDL/include/SDL.h"
+#include "ModuleRender.h"
 
 ModuleInput::ModuleInput() : Module()
 {}
@@ -37,6 +38,25 @@ update_status ModuleInput::Update()
 		return update_status::UPDATE_STOP;
 	}
 
+	if (keyboard[SDL_SCANCODE_UP])
+	{
+		App->render->ymap += 6;
+	}
+
+	if (keyboard[SDL_SCANCODE_DOWN])
+	{
+		App->render->ymap -= 6;
+	}
+
+	if (keyboard[SDL_SCANCODE_RIGHT])
+	{
+		App->render->xmap += 6;
+	}
+
+	if (keyboard[SDL_SCANCODE_LEFT])
+	{
+		App->render->xmap -= 6;
+	}
 	// TODO 1: find out how to detect if the ESC key was pressed
 	// and quit the game
 

@@ -32,6 +32,7 @@ bool ModuleRender::Init()
 		ret = false;
 	}
 	tex = App->textures->Load("Tilemaptest.png");
+	
 	// TODO 9: load a texture "test.png" to test is everything works well
 
 	return ret;
@@ -80,9 +81,9 @@ bool ModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section)
 {
 	bool ret = true;
 	SDL_Rect rect;
-	rect.x = x;
-	rect.y = y;
-
+	rect.x = App->render->xmap;
+	rect.y = App->render->ymap;
+	
 	if(section != nullptr)
 	{
 		rect.w = section->w;
