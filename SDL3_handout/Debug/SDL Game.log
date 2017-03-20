@@ -1,7 +1,3 @@
-﻿  ModuleRender.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  ModuleTextures.cpp
-  Application.cpp
-  SDL Game.vcxproj -> C:\Users\lucasgm\Desktop\SDL3_handout\Debug\SDL3 Handout.exe
-  SDL Game.vcxproj -> C:\Users\lucasgm\Desktop\SDL3_handout\Debug\SDL3 Handout.pdb (Full PDB)
+﻿ModuleAudio.obj : error LNK2001: unresolved external symbol "public: virtual bool __thiscall ModuleAudio::Init(void)" (?Init@ModuleAudio@@UAE_NXZ)
+ModuleAudio.obj : error LNK2001: unresolved external symbol "public: virtual bool __thiscall ModuleAudio::CleanUp(void)" (?CleanUp@ModuleAudio@@UAE_NXZ)
+C:\Users\lucasgm\Documents\GitHub\Scrolling-with-sound\SDL3_handout\Debug\SDL3 Handout.exe : fatal error LNK1120: 2 unresolved externals
