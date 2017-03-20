@@ -1,12 +1,7 @@
-﻿  ModuleWindow.cpp
-  ModuleTextures.cpp
-  ModuleRender.cpp
-  ModuleInput.cpp
-  ModuleAudio.cpp
-  Main.cpp
-  Globals.cpp
+﻿  ModuleAudio.cpp
+  Generating Code...
+  Compiling...
   Application.cpp
   Generating Code...
-  LINK : C:\Users\lucasgm\Documents\GitHub\Scrolling-with-sound\Scrolling-with-sound-master\SDL3_handout\Debug\SDL3 Handout.exe not found or not built by the last incremental link; performing full link
   SDL Game.vcxproj -> C:\Users\lucasgm\Documents\GitHub\Scrolling-with-sound\Scrolling-with-sound-master\SDL3_handout\Debug\SDL3 Handout.exe
   SDL Game.vcxproj -> C:\Users\lucasgm\Documents\GitHub\Scrolling-with-sound\Scrolling-with-sound-master\SDL3_handout\Debug\SDL3 Handout.pdb (Full PDB)
