@@ -48,12 +48,12 @@ update_status ModuleInput::Update()
 		App->render->ymap -= 6;
 	}
 
-	if (keyboard[SDL_SCANCODE_RIGHT])
+	if (keyboard[SDL_SCANCODE_LEFT])
 	{
 		App->render->xmap += 6;
 	}
 
-	if (keyboard[SDL_SCANCODE_LEFT])
+	if (keyboard[SDL_SCANCODE_RIGHT])
 	{
 		App->render->xmap -= 6;
 	}
