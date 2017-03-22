@@ -42,11 +42,11 @@ ModulePlayer::ModulePlayer()
 
 	// jump animation (arcade sprite sheet)
 	jump.PushBack({ 99, 822, 60, 116 });
-	jump.PushBack({ 175, 804, 48, 144 });//90
-	jump.PushBack({ 249, 797, 57, 161 });//79
-	jump.PushBack({ 325, 811, 52, 147 });//71
-	jump.PushBack({ 395, 808, 51, 140 });//92
-	jump.PushBack({ 462, 817, 58, 131 });//112
+	jump.PushBack({ 175, 804, 48, 116 });//90
+	jump.PushBack({ 249, 797, 57, 116 });//79
+	jump.PushBack({ 325, 811, 52, 116 });//71
+	jump.PushBack({ 395, 808, 51, 116 });//92
+	jump.PushBack({ 462, 817, 58, 116 });//112
 	jump.speed = 0.15f;
 
 }
@@ -84,20 +84,32 @@ update_status ModulePlayer::Update()
 
 	if ((App->input->keyboard[SDL_SCANCODE_SPACE] == 1) && (App->input->keyboard[SDL_SCANCODE_D] != 1) && (App->input->keyboard[SDL_SCANCODE_A] != 1))
 	{
-		current_animation = &jump;
+		up = 1;
+		jumping = 1;
 	}
+	if (jumping == 1)
+	{ 
+		current_animation = &jump;
+    	if (up == 1)
+		{ 
+		   position.y -= speed*3;
+          if (position.y < 150)
+		   {
+			   up = 0;
+		   }
+		}
+		if (up == 0)
+		{
+		   position.y += speed*3;
+		   if (position.y == 220)
+		   {
+			   up = 1;
+			   jumping = 0;
+		   }
+		}
+	}	
+	
 
-	if ((App->input->keyboard[SDL_SCANCODE_SPACE] == 1) && (App->input->keyboard[SDL_SCANCODE_D] == 1))
-	{
-		current_animation = &jump;
-		position.x += speed;
-	}
-
-	if ((App->input->keyboard[SDL_SCANCODE_SPACE] == 1) && (App->input->keyboard[SDL_SCANCODE_A] == 1))
-	{
-		current_animation = &jump;
-		position.x -= speed;
-	}
 
 	// Draw everything --------------------------------------
 	SDL_Rect r = current_animation->GetCurrentFrame();

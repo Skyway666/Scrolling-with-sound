@@ -26,6 +26,10 @@ public:
 	Animation jump;
 	iPoint position;
 
+	int up = 0;
+
+	int jumping = 0;
+
 };
 
 #endif
