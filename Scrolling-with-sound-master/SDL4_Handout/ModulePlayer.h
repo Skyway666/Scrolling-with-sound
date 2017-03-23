@@ -24,11 +24,21 @@ public:
 	Animation forward;
 	Animation backward;
 	Animation jump;
+	Animation kick;
+	Animation punch;
 	iPoint position;
 
 	int up = 0;
 
 	int jumping = 0;
+
+	int kicking = 0;
+
+	int punching = 0;
+
+	int time_punch = 0;
+
+	int time_kick = 0;
 
 };
 

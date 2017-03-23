@@ -40,6 +40,20 @@ ModulePlayer::ModulePlayer()
 	backward.PushBack({ 974, 129, 57, 89 });
 	backward.speed = 0.1f;
 
+	kick.PushBack({ 600, 267, 73, 100 });
+	kick.PushBack({ 685, 267, 76, 98 });
+	kick.PushBack({ 773, 262, 129, 99 });
+	kick.PushBack({ 685, 267, 76, 98 });
+	kick.PushBack({ 600, 267, 73, 100 });
+	kick.speed = 0.15f;
+
+	punch.PushBack({ 251, 267, 65, 98 });
+	punch.PushBack({ 329, 267, 83, 98 });
+	punch.PushBack({ 426, 267, 117, 98 });
+	punch.PushBack({ 329, 267, 83, 98 });
+	punch.PushBack({ 251, 267, 65, 98 });
+	punch.speed = 0.1f;
+
 	// jump animation (arcade sprite sheet)
 	jump.PushBack({ 99, 822, 60, 116 });
 	jump.PushBack({ 175, 804, 48, 116 });//90
@@ -80,6 +94,36 @@ update_status ModulePlayer::Update()
 	{
 		current_animation = &backward;
 		position.x -= speed;
+	}
+
+	if (App->input->keyboard[SDL_SCANCODE_K] == 1)
+	{
+		kicking = 1;
+	}
+	if (kicking == 1)
+	{
+		current_animation = &kick;
+		time_kick++;
+		if (time_kick == 30)
+		{
+			kicking = 0;
+			time_kick = 0;
+		}
+	}
+
+	if (App->input->keyboard[SDL_SCANCODE_I] == 1)
+	{
+		punching = 1;
+	}
+	if (punching == 1)
+	{
+		current_animation = &punch;
+		time_punch++;
+		if (time_punch == 30)
+		{
+			punching = 0;
+			time_punch = 0;
+		}
 	}
 
 	if ((App->input->keyboard[SDL_SCANCODE_SPACE] == 1) && (App->input->keyboard[SDL_SCANCODE_D] != 1) && (App->input->keyboard[SDL_SCANCODE_A] != 1))
