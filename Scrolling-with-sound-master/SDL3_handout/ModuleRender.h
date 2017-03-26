@@ -23,8 +23,8 @@ public:
 public:
 	SDL_Renderer* renderer = nullptr;
 	SDL_Texture* tex;
-	int ymap = -15000;
-	int xmap = -400;
+	int ymap = -12100;
+	int xmap = -130;
 	
 };
 
